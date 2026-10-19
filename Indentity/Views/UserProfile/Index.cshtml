@@ -1,0 +1,21 @@
+﻿@model Indentity.Data.ApplicationUser
+@{
+    ViewData["Title"] = "Hồ sơ người dùng";
+}
+
+<h1>Hồ sơ người dùng</h1>
+<dl class="row">
+    <dt class="col-sm-3">Họ và tên</dt>
+    <dd class="col-sm-9">@Model.FullName</dd>
+
+    <dt class="col-sm-3">Email</dt>
+    <dd class="col-sm-9">@Model.Email</dd>
+
+    <dt class="col-sm-3">Ngày sinh</dt>
+    <dd class="col-sm-9">
+        @(Model.DateOfBirth?.ToString("dd/MM/yyyy") ?? "Chưa cập nhật")
+    </dd>
+
+    <dt class="col-sm-3">Địa chỉ</dt>
+    <dd class="col-sm-9">@(Model.Address ?? "Chưa cập nhật")</dd>
+</dl>
